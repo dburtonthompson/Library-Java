@@ -1,19 +1,20 @@
 
-public class Book {
-    private String title, author;
+public class Book extends LibraryItem {
+    private String title;
     private int yearPublished;
+    private Author author;
 
-    public Book(String title, String author, int yearPublished) {
+    public Book(String title, String author, int yearPublished, Author author) {
         this.title = title;
-        this.author = author;
         this.yearPublished = yearPublished;
+        this.author = new Author(name);
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getAuthor() {
+    public Auther getAuthor() {
         return author;
     }
 
@@ -25,7 +26,7 @@ public class Book {
         this.title = title;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
